@@ -1,0 +1,296 @@
+/*  =============
+    Global Styles
+    =============   */
+
+:root {
+    --main-color: #4A0E7A;
+    --secondary-color: #FF901E;
+    --whiteish-color: #F9F9F9;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+:focus {
+    outline: none;
+}
+
+
+/*  ==========
+    Typography
+    ==========  */
+
+body {
+    font-family: monospace, Times, seriff;
+    font-size: 1.2em;
+    font-weight: 120;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#navbar {
+    font-family: 'Franklin Gothic Medium', fantasy, 'Times New Roman', Times, seriff;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+.about-section p {
+    font-size: 1.4em;
+    margin: 0 4.5em;
+}
+
+.nav-links {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+}
+
+
+/*  ======
+    Layout
+    ======  */
+
+#navbar {
+    z-index: 7;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    height: 140px;
+    background-color: var(--main-color);
+    flex-wrap: wrap;
+    opacity: 85%;
+    max-height: 25vh;
+}
+
+.logo-container {
+    margin: 0 auto;
+    flex-grow: 0;
+    flex-basis: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-img {
+    max-width: 50%;
+    max-height: 130px;
+}
+
+.nav-list {
+    padding: 0;
+    flex-grow: 4;
+    flex-basis: 500px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links {
+    position: relative;
+}
+
+.about-section {
+    height: 100vh;
+    text-align: center;
+    background: var(--whiteish-color);
+    box-shadow: inset 0 0 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.works-section {
+    color: var(--whiteish-color);
+    background: #3C155D;
+    padding: 135px 2em 0px 2em;
+    min-height: 100vh;
+}
+
+.works-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.work-picture {
+    width: 100%;
+    height: 352px;
+    margin-bottom: 1em;
+    box-shadow: 3px 3px 2px black;
+}
+
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 400px;
+    flex-basis: 624px;
+    margin: 2em auto;
+    position: relative;
+}
+
+.btn-code {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 7px;
+    color: var(--whiteish-color);
+}
+
+.project-tile h3 {
+    margin: 0;
+}
+
+.hover-work {
+    color: var(--secondary-color);
+    opacity: 0;
+}
+
+#contact-section {
+    box-shadow: inset 0 0 10px black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icons {
+    display: flex;
+    width: 700px;
+    justify-content: space-evenly;
+}
+
+.contact-icons>* {
+    color: rgb(104, 104, 104);
+}
+
+
+/*  ==========
+    Media Query
+    ==========  */
+
+@media only screen and (max-width: 600px) {
+    .about-section p {
+        margin: 0 1em;
+    }
+    .contact-icons {
+        width: 500px;
+    }
+}
+
+
+/*  =========
+    Animation
+    =========   */
+
+@keyframes slideIn {
+    from {}
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {}
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-links::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    bottom: -2px;
+    transform: scale(0);
+}
+
+.nav-links::after {
+    transform-origin: center;
+    left: 0;
+    right: 0;
+    transition: all .5s;
+}
+
+.nav-links:hover::after,
+.nav-links:focus::after {
+    transform: scale(1);
+}
+
+.header-img {
+    transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
+}
+
+.nav-items {
+    transform: translateX(100rem);
+    animation: slideIn .5s forwards;
+}
+
+.nav-items:nth-child(1) {
+    animation-delay: .5s;
+}
+
+.nav-items:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.nav-items:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.page-content {
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+    animation-delay: 2s;
+}
+
+.works-section a:hover,
+.works-section a:focus {
+    opacity: 85%;
+}
+
+.fa-linkedin:hover,
+.fa-linkedin:focus {
+    color: #0077B5;
+}
+
+.fa-whatsapp:hover,
+.fa-whatsapp:focus {
+    color: #25D366;
+}
+
+.fa-twitter:hover,
+.fa-twitter:focus {
+    color: #1DA1F2;
+}
+
+.fa-at:hover,
+.fa-at:focus {
+    color: #C71610;
+}
+
+.fa-github:hover,
+.fa-github:focus {
+    color: black;
+}
