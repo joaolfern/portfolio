@@ -23,7 +23,6 @@ body {
     outline: none;
 }
 
-
 /*  ==========
     Typography
     ==========  */
@@ -59,7 +58,6 @@ h1 {
     text-decoration: none;
     color: white;
 }
-
 
 /*  ======
     Layout
@@ -182,7 +180,6 @@ h1 {
     color: rgb(104, 104, 104);
 }
 
-
 /*  ==========
     Media Query
     ==========  */
@@ -195,7 +192,6 @@ h1 {
         width: 500px;
     }
 }
-
 
 /*  =========
     Animation
@@ -232,8 +228,7 @@ h1 {
     transition: all .5s;
 }
 
-.nav-links:hover::after,
-.nav-links:focus::after {
+.nav-links:hover::after, .nav-links:focus::after {
     transform: scale(1);
 }
 
@@ -265,32 +260,26 @@ h1 {
     animation-delay: 2s;
 }
 
-.works-section a:hover,
-.works-section a:focus {
+.works-section a:hover, .works-section a:focus {
     opacity: 85%;
 }
 
-.fa-linkedin:hover,
-.fa-linkedin:focus {
+.fa-linkedin:hover, .fa-linkedin:focus {
     color: #0077B5;
 }
 
-.fa-whatsapp:hover,
-.fa-whatsapp:focus {
+.fa-whatsapp:hover, .fa-whatsapp:focus {
     color: #25D366;
 }
 
-.fa-twitter:hover,
-.fa-twitter:focus {
+.fa-twitter:hover, .fa-twitter:focus {
     color: #1DA1F2;
 }
 
-.fa-at:hover,
-.fa-at:focus {
+.fa-at:hover, .fa-at:focus {
     color: #C71610;
 }
 
-.fa-github:hover,
-.fa-github:focus {
+.fa-github:hover, .fa-github:focus {
     color: black;
 }
