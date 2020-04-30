@@ -34,7 +34,7 @@ body {
     ==========  */
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', Arial;
     font-size: 1.4em;
     font-weight: 120;
     letter-spacing: 1px;
@@ -65,40 +65,39 @@ h1 {
     ======  */
 
 #navbar {
-    padding: 1rem 0;
-    z-index: 7;
     position: fixed;
+    top: 0;
     width: 100%;
     display: flex;
-    background-color: var(--lightpurple-color);
     flex-wrap: wrap;
+    background-color: var(--lightpurple-color);
     opacity: 85%;
+    padding: 1rem 0;
+    z-index: 7;
 }
 
 .logo-container {
     margin: 0 auto;
-    flex-grow: 0;
-    flex-basis: 400px;
     display: flex;
+    flex-basis: 400px;
     align-items: center;
     justify-content: center;
 }
 
 .header-img {
     max-width: 50%;
-    max-height: auto;
 }
 
 .nav-list {
     list-style-type: none;
-    align-items: center;
-    flex-grow: 4;
+    padding: 1em 0 0 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    flex-grow: 4;
     justify-content: space-around;
     flex-basis: 500px;
-    padding: 0;
-    margin: 0;
 }
 
 .nav-links {
@@ -119,7 +118,7 @@ h1 {
 .works-section {
     color: var(--whiteish-color);
     background: var(--darkpurple-color);
-    padding: 135px 2em 0px 2em;
+    padding: 150px 2em 0px 2em;
     min-height: 100vh;
 }
 
@@ -185,18 +184,19 @@ h1 {
     margin: 1em;
 }
 
-@media screen and (max-width: 992px) {
-    body {
-        font-size: 1.8em;
+@media screen and (max-width: 600px) {
+    #contact-section {
+        justify-content: flex-end;
     }
-    flex-basis: 868px;
+    .project-tile h3 {
+        font-size: .8em;
+    }
 }
 
 /*  =========
     Animation
     =========   */
 
-/*
 @keyframes slideIn {
     from {}
     to {
@@ -217,8 +217,8 @@ h1 {
     width: 100%;
     height: 3px;
     background-color: var(--secondary-color);
-    bottom: -2px;
-    transform: scale(0);
+    bottom: -4px;
+    transform: scaleX(0);
 }
 
 .nav-links::after {
@@ -229,7 +229,7 @@ h1 {
 }
 
 .nav-links:hover::after, .nav-links:focus::after {
-    transform: scale(1);
+    transform: scaleX(1);
 }
 
 .header-img {
