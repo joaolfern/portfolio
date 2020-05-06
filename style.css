@@ -125,15 +125,16 @@ h1 {
 
 .works-showcase {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
     align-items: center;
 }
 
 .work-picture {
     width: 100%;
+    max-width: 900px;
     height: auto;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     border-radius: 20px;
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
@@ -145,16 +146,23 @@ h1 {
     flex-direction: column;
     text-align: center;
     flex-basis: 568px;
-    margin: 2em 0;
+    margin: 1em 1em;
+    flex-grow: 1;
     position: relative;
 }
 
 .btn-code {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -1em;
     padding: 0;
     color: var(--whiteish-color);
+}
+
+.project-wrapper {
+    margin: 0 auto;
+    max-width: 900px;
+    position: relative;
 }
 
 .project-tile h3 {
