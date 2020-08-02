@@ -68,13 +68,15 @@ h1 {
     top: 0;
     width: 100%;
     display: flex;
+    min-height: 83px;
+    padding: 1em 0;
     flex-wrap: wrap;
     background-color: var(--lightpurple-color);
     opacity: .9;
-    padding: 1rem 0;
+    padding-bottom: 1rem 0;
     z-index: 7;
     transition-duration: .8s;
-    /*Hide on scroll*/
+    /*Hides on scroll*/
 }
 
 .logo-container {
@@ -119,7 +121,7 @@ h1 {
 .works-section {
     color: var(--whiteish-color);
     background: var(--darkpurple-color);
-    padding: 2em;
+    padding: 1rem;
     min-height: 100vh;
 }
 
@@ -133,6 +135,7 @@ h1 {
 .work-picture {
     width: 100%;
     max-width: 900px;
+    min-width: 250px;
     height: auto;
     margin-bottom: .5em;
     border-radius: 20px;
