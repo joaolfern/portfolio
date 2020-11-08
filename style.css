@@ -10,6 +10,12 @@
     --unhovered-color: grey;
 }
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -42,6 +48,8 @@ body {
 
 a {
     text-decoration: none;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 h1 {
@@ -128,20 +136,8 @@ h1 {
 .works-showcase {
     display: flex;
     flex-wrap: wrap-reverse;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-}
-
-.work-picture {
-    width: 100%;
-    max-width: 900px;
-    min-width: 250px;
-    height: auto;
-    margin-bottom: .5em;
-    border-radius: 20px;
-    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .project-tile {
@@ -149,27 +145,31 @@ h1 {
     flex-direction: column;
     text-align: center;
     flex-basis: 568px;
-    margin: 1em 1em;
     flex-grow: 1;
     position: relative;
+    margin: 1em 0;
+    text-align: center;
+}
+
+
+.work-picture {
+    height: auto;
+    max-width: 540px;
+    max-height: 300px;
+    border-radius: 20px;
+    margin: 0 auto;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .btn-code {
-    position: absolute;
-    right: 0;
-    bottom: -1em;
-    padding: 0;
     color: var(--whiteish-color);
-}
-
-.project-wrapper {
-    margin: 0 auto;
-    max-width: 900px;
-    position: relative;
 }
 
 .project-tile h3 {
     margin: 0;
+    font-size: min(28px, 8vw);
 }
 
 .hover-work {
@@ -190,7 +190,7 @@ h1 {
 .contact-icons {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 90%;
     justify-content: space-evenly;
 }
 
@@ -200,8 +200,14 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
-    .project-tile h3 {
-        font-size: .8em;
+    .work-picture{
+        width: 80vw;
+        max-width: 80vw;
+    }
+
+    .work-picture--mobile{
+        width: 40vw;
+        max-width: 40vw;
     }
 }
 
@@ -280,7 +286,7 @@ h1 {
     color: #0077B5;
 }
 
-.fa-whatsapp:hover, .fa-whatsapp:focus {
+.fa-whatsapp-square:hover, .fa-whatsapp:focus {
     color: #25D366;
 }
 
