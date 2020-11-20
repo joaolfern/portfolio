@@ -13,13 +13,14 @@
 </head>
 
 <script src="navbar.js" defer></script>
+<script src="expandProjects.js" defer></script>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 <body>
     <header>
         <nav id="navbar">
             <div class="logo-container">
-                <img class="header-img" src="https://i.imgur.com/jF9t17a.png" nandes">
+                <img class="header-img" src="https://i.imgur.com/jF9t17a.png" >
             </div>
             <ul class="nav-list">
                 <li class="nav-items">
@@ -50,59 +51,19 @@
 
                 <div class="project-tile">
                     <div class="image-wrapper">
-                        <a href="https://simplec4lculator.netlify.com/" target="_blank">
-                            <img class="work-picture" src="https://i.imgur.com/zZPj9xI.png">
+                        <a class="a-photo" href="https://joaoaoluiz-pokedex.netlify.app/" target="_blank">
+                            <img class="work-picture" src="https://i.imgur.com/8OOcMVR.png">
                         </a>
                     </div>
                     <h3>
-                        Simple Calculator
+                        Pokedex
                     </h3>
-                    <a class="btn-code" href="https://codepen.io/_dusnik/pen/eYNwLYM" target="_blank">
-                        <i class="fab fa-codepen"></i>
+                    <a class="btn-code" href="https://github.com/joaoaoluiz/react-pokedex" target="_blank">
+                        <i class="fab fa-github"></i>
                     </a>
                 </div>
 
-                <div class="project-tile">
-                    <a href="https://somethinfy.netlify.com/" target="_blank">
-                        <img class="work-picture" src="https://i.imgur.com/0zBQMSe.png">
-                    </a>
-                    <h3>
-                        Landing Page
-                    </h3>
-                    <a class="btn-code" href="https://codepen.io/_dusnik/pen/YzPwBXd" target="_blank">
-                        <i class="fab fa-codepen"></i>
-                    </a>
-                </div>
-
-                <div class="project-tile">
-                    <div class="image-wrapper">
-                        <a href="https://somedocumentation.netlify.com/" target="_blank">
-                            <img class="work-picture" src="https://i.imgur.com/Ssxcz2y.png">
-                        </a>
-                    </div>
-                    <h3>
-                        Web Docs Page
-                    </h3>
-                    <a class="btn-code" href="https://codepen.io/_dusnik/pen/RwNJxzN" target="_blank">
-                        <i class="fab fa-codepen"></i>
-                    </a>
-                </div>
-
-                <div class="project-tile">
-                    <div class="image-wrapper">
-                        <a href="https://joaoaoluiz.github.io/portfolio/" target="_blank">
-                            <img class="work-picture" src="https://i.imgur.com/PZxo5gJ.png">
-                        </a>
-                    </div>
-
-                    <h3>
-                        Personal Portfolio
-                    </h3>
-                    <a class="btn-code" href="https://codepen.io/_dusnik/pen/OJVPmbd?editors=1100" target="_blank">
-                        <i class="fab fa-codepen"></i>
-                    </a>
-                </div>
-
+                
                 <div class="project-tile">
                     <div class="image-wrapper">
                         <a class="a-photo" href="https://my-react-app-to-do-list.netlify.app/" target="_blank">
@@ -119,6 +80,18 @@
                 </div>
 
                 <div class="project-tile">
+                    <a href="https://joaoaoluiz-nubankapp.netlify.app/" target="_blank">
+                        <img class="work-picture work-picture--mobile" src="https://i.imgur.com/oONsTlY.png">
+                    </a>
+                    <h3>
+                        Nubank HomeScreen
+                    </h3>
+                    <a class="btn-code" href="https://github.com/joaoaoluiz/nubank-HomeScreen" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+
+                <div class="project-tile hidden">
                     <div class="image-wrapper">
                         <a class="a-photo" href="https://joaoaoluiz-typing-game.netlify.app/" target="_blank">
                             <img class="work-picture" src="https://i.imgur.com/Xc8DyQr.png">
@@ -132,30 +105,68 @@
                     </a>
                 </div>
 
-                <div class="project-tile">
-                    <a href="https://joaoaoluiz-nubankapp.netlify.app/" target="_blank">
-                        <img class="work-picture work-picture--mobile" src="https://i.imgur.com/oONsTlY.png">
-                    </a>
-                    <h3>
-                        Nubank HomeScreen
-                    </h3>
-                    <a class="btn-code" href="https://github.com/joaoaoluiz/nubank-HomeScreen" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-
-                <div class="project-tile">
+                <div class="project-tile hidden">
                     <div class="image-wrapper">
-                        <a class="a-photo" href="https://joaoaoluiz-pokedex.netlify.app/" target="_blank">
-                            <img class="work-picture" src="https://i.imgur.com/8OOcMVR.png">
+                        <a href="https://simplec4lculator.netlify.com/" target="_blank">
+                            <img class="work-picture" src="https://i.imgur.com/zZPj9xI.png">
                         </a>
                     </div>
                     <h3>
-                        Pokedex
+                        Simple Calculator
                     </h3>
-                    <a class="btn-code" href="https://github.com/joaoaoluiz/react-pokedex" target="_blank">
-                        <i class="fab fa-github"></i>
+                    <a class="btn-code" href="https://codepen.io/_dusnik/pen/eYNwLYM" target="_blank">
+                        <i class="fab fa-codepen"></i>
                     </a>
+                </div>
+
+                <div class="project-tile hidden">
+                    <a href="https://somethinfy.netlify.com/" target="_blank">
+                        <img class="work-picture" src="https://i.imgur.com/0zBQMSe.png">
+                    </a>
+                    <h3>
+                        Landing Page
+                    </h3>
+                    <a class="btn-code" href="https://codepen.io/_dusnik/pen/YzPwBXd" target="_blank">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </div>
+
+                <div class="project-tile hidden">
+                    <div class="image-wrapper">
+                        <a href="https://somedocumentation.netlify.com/" target="_blank">
+                            <img class="work-picture" src="https://i.imgur.com/Ssxcz2y.png">
+                        </a>
+                    </div>
+                    <h3>
+                        Web Docs Page
+                    </h3>
+                    <a class="btn-code" href="https://codepen.io/_dusnik/pen/RwNJxzN" target="_blank">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </div>
+
+                <div class="project-tile hidden">
+                    <div class="image-wrapper">
+                        <a href="https://joaoaoluiz.github.io/portfolio/" target="_blank">
+                            <img class="work-picture" src="https://i.imgur.com/PZxo5gJ.png">
+                        </a>
+                    </div>
+
+                    <h3>
+                        Personal Portfolio
+                    </h3>
+                    <a class="btn-code" href="https://codepen.io/_dusnik/pen/OJVPmbd?editors=1100" target="_blank">
+                        <i class="fab fa-codepen"></i>
+                    </a>
+                </div>
+
+
+                <div class="project-tile">
+                    <div>
+                        <button class="project-tile__expandBtn" onclick="showProjects()">
+                            +
+                        </button>
+                    </div>
                 </div>
 
             </div>

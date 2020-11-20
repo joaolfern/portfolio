@@ -67,6 +67,7 @@ h1 {
     margin: 0 4.5em;
 }
 
+
 /*  ======
     Layout
     ======  */
@@ -135,7 +136,7 @@ h1 {
 
 .works-showcase {
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -170,6 +171,21 @@ h1 {
 .project-tile h3 {
     margin: 0;
     font-size: min(28px, 8vw);
+}
+
+.project-tile__expandBtn {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    font-size: 2em;
+    background-color: var(--secondary-color);
+    color: var(--whiteish-color);
+    cursor: pointer;
+    border: none;
+    -webkit-box-shadow: 5px 5px 5px black;
+    -moz-box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px 5px black;
 }
 
 .hover-work {
@@ -278,7 +294,7 @@ h1 {
     animation-delay: 2s;
 }
 
-.works-section a:hover, .works-section a:focus {
+.project-tile a:hover, .project-tile a:focus, .project-tile__expandBtn:hover {
     opacity: 85%;
 }
 
@@ -300,4 +316,9 @@ h1 {
 
 .fa-github:hover, .fa-github:focus {
     color: black;
+}
+
+
+.hidden{
+    display: none;
 }
