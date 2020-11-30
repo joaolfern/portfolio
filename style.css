@@ -58,7 +58,7 @@ h1 {
     color: var(--secondary-color);
 }
 
-.nav-links {
+.navbar__link {
     text-decoration: none;
     color: var(--whiteish-color);
 }
@@ -88,7 +88,7 @@ h1 {
     /*Hides on scroll*/
 }
 
-.logo-container {
+.navbar__img {
     margin: 0 auto;
     display: flex;
     flex-basis: 400px;
@@ -100,7 +100,7 @@ h1 {
     max-width: 50%;
 }
 
-.nav-list {
+.navbar__list {
     list-style-type: none;
     padding: 1em 0 0 0;
     margin: 0;
@@ -112,7 +112,7 @@ h1 {
     flex-basis: 500px;
 }
 
-.nav-links {
+.navbar__link {
     position: relative;
 }
 
@@ -134,18 +134,18 @@ h1 {
     min-height: 100vh;
 }
 
-.works-showcase {
+.projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
 }
 
-.project-tile {
+.project__item {
     display: flex;
     flex-direction: column;
     text-align: center;
     flex-basis: 568px;
+    max-width: 665px;
     flex-grow: 1;
     position: relative;
     margin: 1em 0;
@@ -153,7 +153,7 @@ h1 {
 }
 
 
-.work-picture {
+.project__img {
     height: auto;
     max-width: 540px;
     max-height: 300px;
@@ -164,28 +164,24 @@ h1 {
     box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.btn-code {
+.project__codeBtn {
     color: var(--whiteish-color);
 }
 
-.project-tile h3 {
+.project__item h3 {
     margin: 0;
     font-size: min(28px, 8vw);
 }
 
-.project-tile__expandBtn {
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
-    margin: 0 auto;
-    font-size: 2em;
-    background-color: var(--secondary-color);
+.project__expandBtn {
     color: var(--whiteish-color);
+    background: transparent;
     cursor: pointer;
     border: none;
-    -webkit-box-shadow: 5px 5px 5px black;
-    -moz-box-shadow: 5px 5px 5px black;
-    box-shadow: 5px 5px 5px black;
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 auto;
 }
 
 .hover-work {
@@ -216,12 +212,12 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
-    .work-picture{
+    .project__img{
         width: 80vw;
         max-width: 80vw;
     }
 
-    .work-picture--mobile{
+    .project__img--mobile{
         width: 40vw;
         max-width: 40vw;
     }
@@ -245,7 +241,7 @@ h1 {
     }
 }
 
-.nav-links::after {
+.navbar__link::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -255,14 +251,14 @@ h1 {
     transform: scaleX(0);
 }
 
-.nav-links::after {
+.navbar__link::after {
     transform-origin: center;
     left: 0;
     right: 0;
     transition: all .5s;
 }
 
-.nav-links:hover::after, .nav-links:focus::after {
+.navbar__link:hover::after, .navbar__link:focus::after {
     transform: scaleX(1);
 }
 
@@ -271,20 +267,20 @@ h1 {
     animation: slideIn .5s forwards;
 }
 
-.nav-items {
+.navbar__item {
     transform: translateX(100rem);
     animation: slideIn .5s forwards;
 }
 
-.nav-items:nth-child(1) {
+.navbar__item:nth-child(1) {
     animation-delay: .5s;
 }
 
-.nav-items:nth-child(2) {
+.navbar__item:nth-child(2) {
     animation-delay: 1s;
 }
 
-.nav-items:nth-child(3) {
+.navbar__item:nth-child(3) {
     animation-delay: 1.5s;
 }
 
@@ -294,8 +290,12 @@ h1 {
     animation-delay: 2s;
 }
 
-.project-tile a:hover, .project-tile a:focus, .project-tile__expandBtn:hover {
+.project__item a:hover, .project__item a:focus {
     opacity: 85%;
+}
+
+.project__expandBtn:hover{
+    color: var(--secondary-color);
 }
 
 .fa-linkedin:hover, .fa-linkedin:focus {
@@ -317,7 +317,6 @@ h1 {
 .fa-github:hover, .fa-github:focus {
     color: black;
 }
-
 
 .hidden{
     display: none;

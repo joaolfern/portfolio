@@ -1,5 +1,5 @@
 const hiddenProjects = document.querySelectorAll(".hidden");
-const expandButton = document.querySelector(".project-tile__expandBtn")
+const expandButton = document.querySelector(".project__expandBtn")
 let on = false;
 
 function showProjects(){
@@ -7,5 +7,5 @@ function showProjects(){
         project.classList.toggle("hidden");
     })
     on = !on;
-    expandButton.textContent = on ? "-" : "+"
+    expandButton.textContent = on ? "mostrar menos" : "mostrar mais"
 }
