@@ -138,6 +138,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .project__item {
@@ -182,6 +183,11 @@ h1 {
     font-weight: bold;
     letter-spacing: 1px;
     margin: 0 auto;
+}
+
+.project__expandBtn-wrapper{
+    display: flex;
+    justify-content: center;
 }
 
 .hover-work {
