@@ -49,7 +49,6 @@ body {
 a {
     text-decoration: none;
     width: fit-content;
-    margin: 0 auto;
 }
 
 h1 {
@@ -140,23 +139,29 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .project__item {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-content: flex-start;
+    max-width: min(530px, 90vw);
     flex-grow: 1;
     position: relative;
-    margin: 1em 0;
     text-align: center;
+    margin: 1rem 0;
 }
 
+.image-wrapper {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .project__img {
-    height: auto;
-    max-width: min(665px, 90vw);
+    max-width: min(530px, 90vw);
     max-height: 300px;
     border-radius: 20px;
     margin: 0 auto;
@@ -167,11 +172,14 @@ h1 {
 
 .project__codeBtn {
     color: var(--whiteish-color);
+    position: absolute;
+    right: 0;
 }
 
 .project__item h3 {
     margin: 0;
     font-size: min(28px, 8vw);
+    flex-grow: 10;
 }
 
 .project__expandBtn {
@@ -183,6 +191,17 @@ h1 {
     font-weight: bold;
     letter-spacing: 1px;
     margin: 0 auto;
+}
+
+.wrap-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.wrap-center--project {
+    padding-right: 1em;
 }
 
 #contact-section {
