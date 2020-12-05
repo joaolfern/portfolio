@@ -1,0 +1,33 @@
+.description__wrapper {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.description {
+    overflow-y: hidden;
+    max-height: .8em;
+    box-shadow: 0 10px 8px -8px whitesmoke;  
+    opacity: .8;
+    transition: all .5s, max-height .4s ease-out;
+}
+
+.description:hover {
+    opacity: 1;
+}
+
+.description--shown {
+    max-height: 300px;
+    opacity: 1;
+    box-shadow: none;
+    transition: all .5s, max-height 1s ease-in-out;
+}
+
+.description__button {
+    position: absolute;
+    bottom: -1em;
+    border: none;
+    background: transparent;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    cursor: pointer;
+}

@@ -1,5 +1,5 @@
 const hiddenProjects = document.querySelectorAll(".hidden");
-const expandButton = document.querySelector(".project__expandBtn")
+const expandButton = document.querySelector(".project__expandBtn");
 let on = false;
 
 function showProjects(){

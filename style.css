@@ -128,17 +128,26 @@ h1 {
     align-items: center;
 }
 
-.works-section {
+.project-section{
     color: var(--whiteish-color);
     background: var(--darkpurple-color);
     padding: 1rem;
     min-height: 100vh;
 }
 
+#project-section h1, p {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#project-section p {
+    text-align: justify;
+}
+
 .projects {
+    margin-top: 1em;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -174,12 +183,20 @@ h1 {
     color: var(--whiteish-color);
     position: absolute;
     right: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.project__codeBtn--shown {
+    opacity: 1;
+    transition: opacity 1s ease-out;
 }
 
 .project__item h3 {
     margin: 0;
     font-size: min(28px, 8vw);
     flex-grow: 10;
+    max-width: 80%;
 }
 
 .project__expandBtn {
@@ -198,10 +215,6 @@ h1 {
     justify-content: center;
     align-items: center;
     position: relative;
-}
-
-.wrap-center--project {
-    padding-right: 1em;
 }
 
 #contact-section {
@@ -230,15 +243,17 @@ h1 {
     #navbar {
         padding-left: 1em;
     }
+
+    .image-wrapper{
+        height: unset;
+    }
 }
 
 @media screen and (max-width: 380px) {
     .navbar__img{
         display: none;
     }
-
 }
-
 
 /*  =========
     Animation
