@@ -21,10 +21,8 @@ html {
 }
 
 body {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 .bold {
@@ -52,8 +50,7 @@ a {
 }
 
 h1 {
-    font-size: 2.8em;
-    margin: 0;
+    font-size: min(2.8em, 17vw);
     color: var(--secondary-color);
 }
 
@@ -61,11 +58,6 @@ h1 {
     text-decoration: none;
     color: var(--whiteish-color);
 }
-
-.about-section p {
-    margin: 0 4.5em;
-}
-
 
 /*  ======
     Layout
@@ -114,7 +106,6 @@ h1 {
 
 .navbar__link {
     position: relative;
-
 }
 
 .about-section {
@@ -126,6 +117,16 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+    box-sizing: content-box;
+}
+
+.about-section h1 {
+    line-height: 1em;
+}
+
+.about-section p {
+    font-size: min(1em, 10vw);
 }
 
 .project-section{

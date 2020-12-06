@@ -14,4 +14,10 @@ expandButtons.forEach((button, i) => {
         }
         sourceButtons.item(i).classList.toggle("project__codeBtn--shown");
     });
+    button.addEventListener('mouseover', () => {
+        descriptions.item(i).classList.add('description--preview');
+    });
+    button.addEventListener('mouseout', () => {
+        descriptions.item(i).classList.remove('description--preview');
+    });
 });
