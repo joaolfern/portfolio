@@ -94,6 +94,7 @@ h1 {
 .header-img {
     width: 40vw;
     max-width: 200px;
+    min-height: 81px;
 }
 
 .navbar__list {
@@ -141,7 +142,7 @@ h1 {
 }
 
 #project-section h1, p {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -155,9 +156,20 @@ h1 {
 
 .projects {
     margin-top: 1em;
+    gap: 1em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    transition: max-height 1s ease-in-out;
+    overflow: hidden;
+}
+
+.toggledOn {
+    max-height: 3000px;
+}
+
+.toggledOff {
+    max-height: 770px;
 }
 
 .project__item {
@@ -168,7 +180,6 @@ h1 {
     flex-grow: 1;
     position: relative;
     text-align: center;
-    margin: 1rem 0;
 }
 
 .image-wrapper {
@@ -181,7 +192,7 @@ h1 {
 .project__img {
     max-width: min(530px, 90vw);
     max-height: 300px;
-    border-radius: 20px;
+    border-radius: 1rem;
     margin: 0 auto;
     -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
@@ -318,21 +329,21 @@ h1 {
 }
 
 .navbar__item:nth-child(1) {
-    animation-delay: .5s;
+    animation-delay: .25s;
 }
 
 .navbar__item:nth-child(2) {
-    animation-delay: 1s;
+    animation-delay: .5s;
 }
 
 .navbar__item:nth-child(3) {
-    animation-delay: 1.5s;
+    animation-delay: .75s;
 }
 
 .page-content {
     opacity: 0;
-    animation: fadeIn 4s forwards;
-    animation-delay: 2s;
+    animation: fadeIn 3s forwards;
+    animation-delay: 1s;
 }
 
 .project__item a:hover, .project__item a:focus {
