@@ -1,11 +1,19 @@
 const hiddenProjects = document.querySelectorAll(".hidden");
 const expandButton = document.querySelector(".project__expandBtn");
-let on = false;
+const projectContainer = document.querySelector(".projects");
+let on = true;
 
-function showProjects(){
-    hiddenProjects.forEach(project => {
-        project.classList.toggle("hidden");
-    })
+expandButton.addEventListener("click", () => {
+    if (on) {
+        projectContainer.classList.add("toggledOn")
+        projectContainer.classList.remove("toggledOff")
+    }
+    else {
+        document.location = "#contact-section"
+        projectContainer.classList.add("toggledOff");
+        projectContainer.classList.remove("toggledOn");
+    }
+    expandButton.textContent = on ? "mostrar menos" : "mostrar mais";
+
     on = !on;
-    expandButton.textContent = on ? "mostrar menos" : "mostrar mais"
-}
+})
