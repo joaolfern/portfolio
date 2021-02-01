@@ -42,7 +42,7 @@ body {
     ==========  */
 
 body {
-    font-family: 'Roboto', Arial;
+    font-family: Helvetica, Arial;
     font-size: 1.4em;
     font-weight: 120;
     letter-spacing: 1px;
@@ -128,6 +128,7 @@ h1 {
 
 .about-section h1 {
     line-height: 1em;
+    font-size: 3rem;
 }
 
 .about-section p {
@@ -142,16 +143,31 @@ h1 {
 }
 
 #project-section h1, p {
-    max-width: 1000px;
     margin: 0 auto;
 }
 
-.project-section__desc {
-    text-indent: 1em;
+.project-section__header {
+    max-width: 60vw;
+    margin: 115px 4rem;
+    margin-bottom: 80px;
 }
 
-#project-section p {
-    text-align: justify;
+.project-section__desc::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 300px;
+    max-width: 30vw;
+    height: 10px;
+    bottom: -2rem;
+    left: 0;
+    background-color: var(--whiteish-color);
+}
+
+.project-section__desc {
+    margin-top: .7rem;
+    font-size: 1.8rem;
+    position: relative;
 }
 
 .projects {
@@ -164,8 +180,12 @@ h1 {
     overflow: hidden;
 }
 
+.description__desc {
+    text-align: justify;
+}
+
 .toggledOn {
-    max-height: 3000px;
+    max-height: 5000px;
 }
 
 .toggledOff {
@@ -255,13 +275,14 @@ h1 {
 .contact-icons {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    max-width: 800px;
     justify-content: space-evenly;
 }
 
-.contact-icons>* {
+.contact-icons__item {
     color: var(--unhovered-color);
     margin: 1em;
+    flex-basis: 20%;
 }
 
 @media screen and (max-width: 800px) {
@@ -270,6 +291,19 @@ h1 {
     }
     .image-wrapper {
         height: unset;
+    }
+    .project-section__header {
+        max-width: 100%;
+        margin: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+    .project-section__title {
+        font-size: 2.8rem;
+    }
+    .project-section__desc {
+        font-size: 1.4rem;
+        text-align: justify;
     }
 }
 
@@ -354,26 +388,31 @@ h1 {
     color: var(--secondary-color);
 }
 
-.fa-linkedin:hover, .fa-linkedin:focus {
+.fa-linkedin {
     color: #0077B5;
 }
 
-.fa-whatsapp-square:hover, .fa-whatsapp:focus {
+.fa-linkedin, .fa-github, .fa-whatsapp-square, .fa-twitter, .fa-envelope {
+    transition: all .6s ease-out;
+}
+
+.fa-linkedin:hover, .fa-linkedin:focus, .fa-github:hover, .fa-github:focus, .fa-whatsapp-square:hover, .fa-whatsapp-square:focus, .fa-twitter:hover, .fa-twitter:focus, .fa-envelope:hover, .fa-envelope:focus {
+    opacity: .8;
+    transform: scale(1.1)
+}
+
+.fa-whatsapp-square {
     color: #25D366;
 }
 
-.fa-twitter:hover, .fa-twitter:focus {
+.fa-twitter {
     color: #1DA1F2;
 }
 
-.fa-envelope:hover, .fa-envelope:focus {
+.fa-envelope {
     color: #F14336;
 }
 
-.fa-github:hover, .fa-github:focus {
+.github-contact {
     color: black;
-}
-
-.hidden {
-    display: none;
 }

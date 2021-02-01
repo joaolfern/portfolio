@@ -9,7 +9,7 @@ expandButton.addEventListener("click", () => {
         projectContainer.classList.remove("toggledOff")
     }
     else {
-        document.location = "#contact-section"
+        document.location = "#project-section";
         projectContainer.classList.add("toggledOff");
         projectContainer.classList.remove("toggledOn");
     }
